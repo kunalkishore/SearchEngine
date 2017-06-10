@@ -72,4 +72,5 @@ with open('data.txt','r') as f:
 
 # bulk index the data
 print("bulk indexing...")
-res = es.bulk(index = INDEX_NAME, body = bulkData, refresh = True)
+res = client.bulk(index = INDEX_NAME, body = bulkData, refresh = True)
+print("Bulk indexing done....s")
